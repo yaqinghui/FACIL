@@ -26,7 +26,7 @@ _**Class-incremental learning: survey and performance evaluation**_
 ([TPAMI](https://ieeexplore.ieee.org/abstract/document/9915459)) ([arxiv](https://arxiv.org/abs/2010.15277))
 
 It allows to reproduce the results in the paper as well as provide a (hopefully!) helpful framework to develop new
-methods for incremental learning and analyse existing ones. Our idea is to expand the available approaches
+methods for incremental learning and analyse existing ones. Our idea is to expand the available approaches 1
 and tools with the help of the community. To help FACIL grow, don't forget to star this github repository and
 share it to friends and coworkers!
 
