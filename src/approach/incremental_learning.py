@@ -168,7 +168,7 @@ class Inc_Learning_Appr:
         for images, targets in trn_loader:
             # Forward current model
             outputs = self.model(images.to(self.device))
-            loss = self.criterion(t, outputs, targets.to(self.device))
+            loss = self.criterion(t, outputs, targets.to(self.device).long())
             # Backward
             self.optimizer.zero_grad()
             loss.backward()
@@ -183,7 +183,7 @@ class Inc_Learning_Appr:
             for images, targets in val_loader:
                 # Forward current model
                 outputs = self.model(images.to(self.device))
-                loss = self.criterion(t, outputs, targets.to(self.device))
+                loss = self.criterion(t, outputs, targets.to(self.device).long())
                 hits_taw, hits_tag = self.calculate_metrics(outputs, targets)
                 # Log
                 total_loss += loss.item() * len(targets)

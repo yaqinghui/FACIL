@@ -1,0 +1,7 @@
+Downloading https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz to ../data\cifar100\cifar-100-python.tar.gz
+Extracting ../data\cifar100\cifar-100-python.tar.gz to ../data\cifar100
+Files already downloaded and verified
+[(0, 25), (1, 25), (2, 25), (3, 25)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************

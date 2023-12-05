@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "E:\计算机视觉\FACIL\src\main_incremental.py", line 316, in <module>
+    main()
+  File "E:\计算机视觉\FACIL\src\main_incremental.py", line 264, in main
+    appr.train(t, trn_loader[t], val_loader[t])
+  File "E:\计算机视觉\FACIL\src\approach\incremental_learning.py", line 56, in train
+    self.train_loop(t, trn_loader, val_loader)
+  File "E:\计算机视觉\FACIL\src\approach\finetuning.py", line 52, in train_loop
+    super().train_loop(t, trn_loader, val_loader)
+  File "E:\计算机视觉\FACIL\src\approach\incremental_learning.py", line 125, in train_loop
+    valid_loss, valid_acc, _ = self.eval(t, val_loader)
+  File "E:\计算机视觉\FACIL\src\approach\incremental_learning.py", line 186, in eval
+    loss = self.criterion(t, outputs, targets.to(self.device))
+  File "E:\计算机视觉\FACIL\src\approach\finetuning.py", line 61, in criterion
+    return torch.nn.functional.cross_entropy(outputs[t], targets - self.model.task_offset[t])
+  File "G:\Anaconda\envs\FACIL\lib\site-packages\torch\nn\functional.py", line 3053, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+RuntimeError: "nll_loss_forward_reduce_cuda_kernel_2d_index" not implemented for 'Int'
