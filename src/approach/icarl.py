@@ -143,7 +143,7 @@ class Appr(Inc_Learning_Appr):
                 outputs_old = self.model_old(images.to(self.device))
             # Forward current model
             outputs = self.model(images.to(self.device))
-            loss = self.criterion(t, outputs, targets.to(self.device), outputs_old)
+            loss = self.criterion(t, outputs, targets.to(self.device).long(), outputs_old)
             # Backward
             self.optimizer.zero_grad()
             loss.backward()
@@ -180,7 +180,7 @@ class Appr(Inc_Learning_Appr):
         """Returns the loss value"""
 
         # Classification loss for new classes
-        loss = torch.nn.functional.cross_entropy(torch.cat(outputs, dim=1), targets)
+        loss = torch.nn.functional.cross_entropy(torch.cat(outputs, dim=1), targets.long())
         # Distillation loss for old classes
         if t > 0:
             # The original code does not match with the paper equation, maybe sigmoid could be removed from g
