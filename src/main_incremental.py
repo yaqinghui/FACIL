@@ -62,11 +62,7 @@ def main(argv=None):
     parser.add_argument('--pretrained', action='store_true',
                         help='Use pretrained backbone (default=%(default)s)')
     # training args
-<<<<<<< HEAD
-    parser.add_argument('--approach', default='joint', type=str, choices=approach.__all__,
-=======
     parser.add_argument('--approach', default='finetuning', type=str, choices=approach.__all__,
->>>>>>> 07e4a86480c66b7dac2a2e627cec09db5f00dbb7
                         help='Learning approach used (default=%(default)s)', metavar="APPROACH")
     parser.add_argument('--nepochs', default=200, type=int, required=False,
                         help='Number of epochs per training session (default=%(default)s)')

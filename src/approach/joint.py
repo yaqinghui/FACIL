@@ -77,11 +77,8 @@ class Appr(Inc_Learning_Appr):
         for images, targets in trn_loader:
             # Forward current model
             outputs = self.model(images.to(self.device))
-<<<<<<< HEAD
+
             loss = self.criterion(t, outputs, targets.to(self.device).long())
-=======
-            loss = self.criterion(t, outputs, targets.to(self.device))
->>>>>>> 07e4a86480c66b7dac2a2e627cec09db5f00dbb7
             # Backward
             self.optimizer.zero_grad()
             loss.backward()
@@ -90,11 +87,8 @@ class Appr(Inc_Learning_Appr):
 
     def criterion(self, t, outputs, targets):
         """Returns the loss value"""
-<<<<<<< HEAD
         return torch.nn.functional.cross_entropy(torch.cat(outputs, dim=1), targets.long())
-=======
-        return torch.nn.functional.cross_entropy(torch.cat(outputs, dim=1), targets)
->>>>>>> 07e4a86480c66b7dac2a2e627cec09db5f00dbb7
+
 
 
 class JointDataset(Dataset):
