@@ -41,7 +41,7 @@ def main(argv=None):
     parser.add_argument('--datasets', default=['cifar100'], type=str, choices=list(dataset_config.keys()),
                         help='Dataset or datasets used (default=%(default)s)', nargs='+', metavar="DATASET")
     parser.add_argument('--num-workers', default=4, type=int, required=False,
-                        help='Number of subprocesses to use for dataloader (default=%(default)s)')
+                        help='Number of subprocesses to use for dataloader (default=%(degitfault)s)')
     parser.add_argument('--pin-memory', default=False, type=bool, required=False,
                         help='Copy Tensors into CUDA pinned memory before returning them (default=%(default)s)')
     parser.add_argument('--batch-size', default=64, type=int, required=False,
@@ -62,7 +62,11 @@ def main(argv=None):
     parser.add_argument('--pretrained', action='store_true',
                         help='Use pretrained backbone (default=%(default)s)')
     # training args
+<<<<<<< HEAD
     parser.add_argument('--approach', default='joint', type=str, choices=approach.__all__,
+=======
+    parser.add_argument('--approach', default='finetuning', type=str, choices=approach.__all__,
+>>>>>>> 07e4a86480c66b7dac2a2e627cec09db5f00dbb7
                         help='Learning approach used (default=%(default)s)', metavar="APPROACH")
     parser.add_argument('--nepochs', default=200, type=int, required=False,
                         help='Number of epochs per training session (default=%(default)s)')
